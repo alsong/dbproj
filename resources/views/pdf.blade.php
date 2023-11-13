@@ -10,12 +10,10 @@
 </head>
 
 <body>
-    @include('nav-bar')
-    
     <div class="container mt-5">
-    <h3>Video Name:{{$video->title}}</h3>
-    <h3>Genre:{{$video->category}}</h3>
-    <table id="myTable">
+    <h3>Video Name: {{$video->title}}</h3>
+    <h3>Genre: {{$video->category}}</h3>
+    <table id="myTable" class="table table-bordered">
         <thead>
             <tr>
                 <th>Rental No</th>
@@ -43,7 +41,6 @@
     </table>
 
     <h2>Total Earned: {{$total}}</h2>
-    <a href="/rentals/downloadpdf/{{$video->video_number}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Export</a>
 </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="//cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>

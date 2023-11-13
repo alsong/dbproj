@@ -22,10 +22,11 @@ Route::get('/', [BranchController::class, 'showBranches'])->name('home');
 
 Route::get('/staff', [StaffController::class, 'showAllStaff'])->name('staff');
 Route::get('/videos', [VideoController::class, 'showAllVideos'])->name('videos');
-Route::get('/videos/{video_id}', [RentalController::class, 'showVideoDetails'])->name('rentals.video');
+Route::get('/videos/{video_id}', [RentalController::class, 'showVideoDetails'])->name('rentals.video.one');
 
 
 Route::get('/members', [MemberController::class, 'showAllMembers'])->name('members');
 Route::get('/rentals', [RentalController::class, 'showAllRentals'])->name('rentals');
 
 Route::get('/rentals/{video_id}', [RentalController::class, 'showVideoDetails'])->name('rentals.video');
+Route::get('/rentals/downloadpdf/{video_id}', [RentalController::class, 'exportVideoPdf'])->name('rentals.video.pdf');
