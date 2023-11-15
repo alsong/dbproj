@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Rental;
 use App\Models\Video;
-use Barryvdh\DomPDF\PDF;
-use Illuminate\Http\Request;
 
 class RentalController extends Controller
 {
