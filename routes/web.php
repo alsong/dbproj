@@ -26,7 +26,7 @@ Route::post('/staff', [StaffController::class, 'store'])->name('staff.store');
 Route::get('/staff/create', [StaffController::class, 'createStaffView'])->name('staff.create');
 Route::get('/staff/{staff_id}/edit', [StaffController::class, 'edit'])->name('staff.edit');
 Route::put('/staff/{staff_id}', [StaffController::class, 'update'])->name('staff.update');
-Route::delete('/staff/{staff_id}', [StaffController::class, 'destroy'])->name('staff.destroy');
+Route::get('/staff/{staff_id}', [StaffController::class, 'destroy'])->name('staff.destroy');
 
 //videos
 Route::get('/videos', [VideoController::class, 'showAllVideos'])->name('videos');
